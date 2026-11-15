@@ -1,0 +1,195 @@
+/* >>> index, publication, updates */
+.button {
+  display: inline-block;
+  background: var(--red);
+  padding: 11px 17px;
+  margin: 10px 8px 0 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: var(--red-light);
+}
+
+/* >>> ALL PAGES (page title area) */
+.section-heading {
+  padding: 24px 0 27px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 28px;
+}
+
+.section-heading p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+}
+
+/* >>> about, story, world, creators, publication, updates */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+.two-column img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 620px;
+  justify-self: center;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+/* >>> world */
+.image-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.figure {
+  margin: 0;
+}
+
+.figure figcaption {
+  margin-top: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* >>> index, characters, visual-archive, abilities (cards) */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 12px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 17px;
+}
+
+.card-body p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* >>> index only (3 home cards) */
+.card img.publication-cover,
+.card img[src="images/han-bin-ryu.png"],
+.card img[src="images/poster.png"] {
+  height: 300px;
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+/* >>> about, world, creators, publication, updates */
+.info-box {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  padding: 23px;
+  margin: 18px 0;
+}
+
+/* >>> about, characters */
+.tag {
+  display: inline-block;
+  border: 1px solid #71313d;
+  color: #e8a0a8;
+  padding: 4px 9px;
+  font-size: 10px;
+  margin: 3px;
+}
+
+/* >>> publication only */
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.detail-row span:last-child {
+  color: var(--muted);
+  text-align: right;
+}
+
+/* >>> characters, world, visual-archive, abilities, updates */
+.note {
+  background: #21151a;
+  border-left: 3px solid var(--red-light);
+  padding: 13px 16px;
+  margin: 20px 0;
+  color: #d7cdd0;
+  font-size: 13px;
+}
+
+/* >>> characters only (spoiler dropdown) */
+.spoiler {
+  margin-top: 10px;
+  border: 1px dashed #71313d;
+  border-radius: 3px;
+  font-size: 13px;
+}
+
+.spoiler summary {
+  padding: 8px 12px;
+  cursor: pointer;
+  color: var(--accent-text);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.spoiler p {
+  margin: 0;
+  padding: 0 12px 12px;
+}
+
+/* >>> card text blocks (not used by a page yet) */
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 250px;
+  padding: 6px 0;
+  background: linear-gradient(160deg, var(--surface-light), var(--surface));
+}
+
+/* >>> index, characters, visual-archive, abilities (cards layout - 5 per row, 3 on index/abilities) */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.cards .card {
+  width: calc(20% - 12px);
+}
+
+.cards.three-cards .card {
+  width: calc(33.333% - 10px);
+}

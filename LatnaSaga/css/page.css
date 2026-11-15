@@ -1,0 +1,55 @@
+/* ==========================================================
+   SUB-PAGES (about, story, characters, world, visual-archive, abilities, creators, publication, updates)
+   ========================================================== */
+
+/* >>> all sub-pages */
+body.page {
+  padding: 8px 32px 40px;
+}
+
+body.page .section-heading h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 12px 0;
+}
+
+body.page .two-column h3 {
+  margin-bottom: 12px;
+}
+
+/* >>> all sub-pages (back link, shows only when opened alone) */
+.back-link {
+  display: none;
+  margin: 18px 0 0;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--accent-text);
+}
+
+body.standalone {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+body.standalone .back-link {
+  display: inline-block;
+}
+
+/* >>> characters, world (sources list) */
+.sources {
+  margin: 28px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.sources a {
+  color: #e68b97;
+  text-decoration: underline;
+}
+
+.sources ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+}

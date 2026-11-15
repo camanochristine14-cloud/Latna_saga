@@ -1,0 +1,175 @@
+/* ==========================================================
+   ALL PAGES - header & navigation
+   ========================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100; 
+  background: rgba(10, 9, 12, 0.96);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(10px);
+}
+
+.header-inner {
+  max-width: 1240px;
+  margin: auto;
+  padding: 13px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font: 700 22px var(--font-heading);
+  letter-spacing: 2px;
+}
+
+.logo span {
+  display: block;
+  font: 10px var(--font-body);
+  letter-spacing: 3px;
+  color: #c78b93;
+}
+
+.main-nav {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  font-size: 10px;
+  letter-spacing: 0.8px;
+  font-weight: 700;
+  padding: 9px 10px;
+  color: #d8d0d1;
+  border-bottom: 2px solid transparent;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  color: white;
+  border-color: var(--red-light);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-size: 20px;
+  line-height: 1;
+  padding: 7px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* ---- "More" dropdown in main navigation ---- */
+.main-nav {
+  align-items: center;
+}
+
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-more {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font: 700 10px var(--font-body);
+  letter-spacing: 0.8px;
+  padding: 9px 10px;
+  color: #d8d0d1;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+}
+
+.nav-more:hover,
+.nav-dropdown.is-open .nav-more {
+  color: white;
+  border-color: var(--red-light);
+}
+
+.nav-more .caret {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid currentColor;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 200px;
+  margin-top: 6px;
+  padding: 10px 0;
+  background: #14121a;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  z-index: 110;
+}
+
+/* invisible bridge so hover isn't lost between button and panel */
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  right: 0;
+  height: 8px;
+}
+
+.nav-dropdown.is-open .dropdown-menu {
+  display: block;
+}
+
+@media (hover: hover) and (min-width: 761px) {
+  .nav-dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+.main-nav .dropdown-menu a {
+  display: block;
+  padding: 11px 20px;
+  font-size: 11px;
+  letter-spacing: 0.8px;
+  color: white;
+  border-bottom: 0;
+}
+
+.main-nav .dropdown-menu a:hover {
+  color: var(--red-light);
+}
+
+.nav-more.active {
+  color: white;
+  border-color: var(--red-light);
+}
+
+/* on sub-pages the header spans the full window width */
+body.page {
+  overflow-x: clip;
+}
+
+body.page .site-header {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+/* >>> all sub-pages (logo lines up with the page content on the left; home keeps its own position) */
+body.page .header-inner {
+  max-width: none;
+  padding-left: 32px;
+  padding-right: 32px;
+}

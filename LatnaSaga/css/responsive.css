@@ -1,0 +1,107 @@
+/* ==========================================================
+   RESPONSIVE (phones) - ALL PAGES
+   ========================================================== */
+
+@media (max-width: 760px) {
+
+  .header-inner {
+    padding: 11px 16px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main-nav.is-open {
+    display: flex;
+  }
+
+  .main-nav a {
+    padding: 12px 6px;
+    font-size: 11px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  main {
+    padding: 22px 15px 55px;
+  }
+
+  .hero {
+    min-height: 470px;
+  }
+
+  .hero-copy {
+    padding: 25px;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .detail-row span:last-child {
+    text-align: left;
+  }
+
+  body.page {
+    padding: 4px 18px 28px;
+  }
+
+  body.page .header-inner {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .cards.three-cards .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .main-nav {
+    align-items: stretch;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-more {
+    width: 100%;
+    justify-content: space-between;
+    padding: 12px 6px;
+    font-size: 11px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .dropdown-menu {
+    position: static;
+    min-width: 0;
+    margin: 0;
+    padding: 0 0 0 14px;
+    background: none;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .dropdown-menu::before {
+    display: none;
+  }
+
+  .main-nav .dropdown-menu a {
+    padding: 12px 6px;
+    border-bottom: 1px solid var(--line);
+  }
+}
